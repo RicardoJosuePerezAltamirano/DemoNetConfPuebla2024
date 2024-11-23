@@ -1,0 +1,14 @@
+﻿@page "/picturesweb"
+<h3>FotosWebComponent</h3>
+<a href="/">atras </a>
+
+<video id="videoElement" width="320" height="240" autoplay></video>
+<br />
+<button @onclick="CapturePhoto">Capturar Foto</button>
+<br />
+<canvas id="canvasElement" width="320" height="240" style="display:none;"></canvas>
+<br />
+@if (!string.IsNullOrEmpty(PhotoBase64))
+{
+    <img src="@PhotoBase64" alt="Foto capturada" />
+}

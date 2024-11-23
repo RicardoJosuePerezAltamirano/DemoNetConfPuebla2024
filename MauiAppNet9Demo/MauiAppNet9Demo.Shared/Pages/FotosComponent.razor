@@ -1,0 +1,20 @@
+﻿@page "/pictures"
+<h3>FotosComponent</h3>
+<a href="/">atras </a>
+<a href="location">ubicacion </a>
+<button class="btn btn-secondary" @onclick=TakePhoto>Toma foto</button>
+@if (Images != null && Images.Any())
+{
+    <div class="row">
+
+        @foreach (var Image in Images)
+        {
+            <div class="col-3">
+                @*    <button class="btn-sm btn-danger" @onclick=@(()=>RemovePhoto(Image))>X</button> *@
+                <img src="@Image" class="img-fluid">
+
+            </div>
+
+        }
+    </div>
+}
